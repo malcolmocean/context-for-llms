@@ -13,7 +13,7 @@ title: Home
     
     {% assign sorted_pages = site.pages | sort: 'name' %}
     {% for page in sorted_pages %}
-        {% unless page.name == 'index.md' or page.name contains '404' or page.path contains '_layouts' or page.path contains 'assets' %}
+        {% unless page.name == 'index.md' or page.name contains '404' or page.path contains '_layouts' or page.path contains 'assets' or page.path contains 'feed.xml' or page.path contains 'sitemap.xml' %}
             {% assign display_title = page.title | default: page.name | remove: '.md' | replace: '-', ' ' | replace: '_', ' ' | capitalize %}
             <div class="file-item">
                 <span class="file-icon">📄</span>

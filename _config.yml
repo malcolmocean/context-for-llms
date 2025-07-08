@@ -1,7 +1,7 @@
 title: "Malcolm Ocean's LLM Context Archive"
 description: "A collection of content for AI conversations and training"
-baseurl: ""
-url: "https://malcolmocean.github.io/context-for-llms"
+baseurl: "/context-for-llms"
+url: "https://malcolmocean.github.io"
 
 # Build settings
 markdown: kramdown
