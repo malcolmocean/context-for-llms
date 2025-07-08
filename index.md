@@ -18,7 +18,7 @@ A collection of documents regularly shared with LLMs as conversation context.
         {% if page.path contains '/' %}
           <span style="color: #666;">{{ page.path | split: '/' | first }}/</span>
         {% endif %}
-        {{ page.title | default: page.name | remove: '.md' | replace: '-', ' ' | capitalize }}
+        {{ page.title | default: page.name | remove: '.md' | replace: '-', ' ' }}
       </a>
     </li>
   {% endif %}
