@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="site-header">
+            <div class="header-content">
+                <h1 class="site-title">
+                    <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+                </h1>
+                <p class="site-description">{{ site.description }}</p>
+            </div>
+            <div class="retro-divider"></div>
+        </header>
+
+        <main class="main-content">
+            {{ content }}
+        </main>
+
+        <footer class="site-footer">
+            <div class="retro-divider"></div>
+            <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }} | Built with Jekyll & nostalgia</p>
+        </footer>
+    </div>
+
+    <script>
+        // Add some retro sparkle
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('.site-header');
+            setInterval(() => {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle';
+                sparkle.style.left = Math.random() * 100 + '%';
+                sparkle.style.top = Math.random() * 100 + '%';
+                header.appendChild(sparkle);
+                
+                setTimeout(() => {
+                    sparkle.remove();
+                }, 2000);
+            }, 3000);
+        });
+    </script>
+</body>
+</html>

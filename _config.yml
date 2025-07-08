@@ -1,0 +1,29 @@
+title: "Malcolm Ocean's LLM Context Archive"
+description: "A collection of content for AI conversations and training"
+baseurl: ""
+url: "https://malcolmocean.github.io/context-for-llms"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
