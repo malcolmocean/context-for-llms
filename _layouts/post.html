@@ -4,7 +4,7 @@ layout: default
 
 <article class="post">
     <header class="post-header">
-        {% assign display_title = page.title | default: page.name | remove: '.md' | replace: '-', ' ' | replace: '_', ' ' | capitalize %}
+        {% assign display_title = page.title | default: page.slug | remove: '.md' | replace: '-', ' ' | replace: '_', ' ' %}
         <h1 class="post-title">{{ display_title }}</h1>
         {% if page.date %}
         <time class="post-date" datetime="{{ page.date | date_to_xmlschema }}">

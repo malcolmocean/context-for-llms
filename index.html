@@ -7,14 +7,14 @@ title: Home
     <h2>📁 Content Archive</h2>
     <p>Welcome to the digital vault! Here's all the content available for AI conversations and training.</p>
 </div>
-
+  
 <div class="file-list">
     <h3>📄 Available Files</h3>
     
     {% assign sorted_pages = site.pages | sort: 'name' %}
     {% for page in sorted_pages %}
         {% unless page.name == 'index.md' or page.name contains '404' or page.path contains '_layouts' or page.path contains 'assets' or page.path contains 'feed.xml' or page.path contains 'sitemap.xml' %}
-            {% assign display_title = page.title | default: page.name | remove: '.md' | replace: '-', ' ' | replace: '_', ' ' | capitalize %}
+            {% assign display_title = page.title | default: page.name | remove: '.md' | replace: '-', ' ' | replace: '_', ' ' %}
             <div class="file-item">
                 <span class="file-icon">📄</span>
                 <a href="{{ page.url | relative_url }}" class="file-link">
@@ -30,7 +30,7 @@ title: Home
     {% endfor %}
     
     {% for post in site.posts %}
-        {% assign display_title = post.title | default: post.name | remove: '.md' | replace: '-', ' ' | replace: '_', ' ' | capitalize %}
+        {% assign display_title = post.title | default: post.name | remove: '.md' | replace: '-', ' ' | replace: '_', ' ' %}
         <div class="file-item">
             <span class="file-icon">📄</span>
             <a href="{{ post.url | relative_url }}" class="file-link">
