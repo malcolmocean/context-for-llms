@@ -12,23 +12,39 @@ title: Home
     <h3>📄 Available Files</h3>
     
     {% assign sorted_pages = site.pages | sort: 'name' %}
+    {% assign pages_by_folder = '' | split: '' %}
+    
     {% for page in sorted_pages %}
         {% unless page.name == 'index.md' or page.name contains '404' or page.path contains '_layouts' or page.path contains 'assets' or page.path contains 'feed.xml' or page.path contains 'sitemap.xml' %}
-            {% assign display_title = page.title | default: page.name | remove: '.md' | replace: '-', ' ' | replace: '_', ' ' %}
-            <div class="file-item">
-                <span class="file-icon">📄</span>
-                <a href="{{ page.url | relative_url }}" class="file-link">
-                    {{ display_title }}
-                </a>
-                <span class="file-meta">
-                    {% if page.date %}
-                        • {{ page.date | date: "%Y-%m-%d" }}
-                    {% endif %}
-                </span>
-            </div>
+            {% assign folder = page.path | split: '/' | first %}
+            {% assign pages_by_folder = pages_by_folder | push: folder %}
+            {% assign pages_by_folder = pages_by_folder | uniq %}
         {% endunless %}
     {% endfor %}
     
+    {% for folder in pages_by_folder %}
+        <h4 style="color: #00ffff; font-family: 'VT323', monospace; font-size: 1.4rem; margin: 25px 0 15px 0; border-bottom: 1px solid #00ffff; padding-bottom: 5px;">📁 {{ folder | replace: '-', ' ' | replace: '_', ' ' | capitalize }}</h4>
+        
+        {% for page in sorted_pages %}
+            {% unless page.name == 'index.md' or page.name contains '404' or page.path contains '_layouts' or page.path contains 'assets' or page.path contains 'feed.xml' or page.path contains 'sitemap.xml' %}
+                {% assign page_folder = page.path | split: '/' | first %}
+                {% if page_folder == folder %}
+                    {% assign display_title = page.title | default: page.name | remove: '.md' | replace: '-', ' ' | replace: '_', ' ' %}
+                    <div class="file-item">
+                        <span class="file-icon">📄</span>
+                        <a href="{{ page.url | relative_url }}" class="file-link">
+                            {{ display_title }}
+                        </a>
+                        <span class="file-meta">
+                            {% if page.date %}
+                                • {{ page.date | date: "%Y-%m-%d" }}
+                            {% endif %}
+                        </span>
+                    </div>
+                {% endif %}
+            {% endunless %}
+        {% endfor %}
+    {% endfor %}
     {% for post in site.posts %}
         {% assign display_title = post.title | default: post.name | remove: '.md' | replace: '-', ' ' | replace: '_', ' ' %}
         <div class="file-item">
