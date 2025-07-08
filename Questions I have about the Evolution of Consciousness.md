@@ -14,7 +14,7 @@ For how I’m seeing this whole field, see [Evolution of Consciousness one-pager
 
 *I'm not treating any of these as definitely-true, but they all seem plausible or seem to highlight something important with a better explanation than I've seen elsewhere. And I haven’t necessarily read the whole book/series of everything in this section. In some cases only a chapter or a single page. Also they are not in any particular order at the moment; maybe at some point I’ll sort them (by what? lol).*
 
-1. me - Non Naive Trust Dance (makes sense to me to have this be on of the game pieces in play here)  
+1. me, Malcolm Ocean - Non Naive Trust Dance (makes sense to me to have this be one of the game pieces in play here)  
    * Distrust as Gnosis  
    * Trust as Truth in 1st person  
    * [Paradox of Ego & Parable of Canoe Sandwich](https://malcolmocean.com/2024/05/the-parable-of-the-canoe-sandwich/)  
