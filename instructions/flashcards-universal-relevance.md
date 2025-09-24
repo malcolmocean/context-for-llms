@@ -1,0 +1,1 @@
+I care only about the main structural concepts, kind of like a glossary etc.  Ignore completely any dates, places, events, etc.  focus only on ideas that would be useful to someone living in a totally different galaxy.
