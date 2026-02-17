@@ -1,0 +1,5 @@
+- the basic premise is that each player has some set of constraints and the goal is to figure out how to satisfy them all at once
+- the simple version is that each player knows exactly what their own constraints are, but can't talk about them, they can only propose options and communicate 👍/ 👎 , and everybody wins when someone proposes an option that works for everybody
+- (an example of the simple version is that each player picks some criterion that a word has to match, could be like "must have exactly 2 vowels" or "must be a verb" and then you try to find a word that matches them all)
+- but I feel like the more interesting/realistic versions are where you don't actually have complete knowledge of your own constraints (/desires) but you have better access than others do to checking in with them...  which would require some sort of system that could be deterministic (but with a lot of parameters) or could be run by an LLM or something.
+- and then you can communicate openly, and speculate about what you think would work for you

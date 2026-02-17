@@ -58,7 +58,7 @@ Don't reference the source.
 
 ## EXAMPLES OF EXCELLENT CARDS
 
-
+[a good example of cloze deletion using like, types of IFS parts so there's only one getting deleted at a time]
 
 # PURPOSE
 These decks are for the purpose of understanding the world better in order to make better decisions, not for studying for a test (I'm not a school student but a man in my 30s: entrepreneur, researcher, philosopher, father). You can create some cards that are focused on recalling definitions, functions and explanations, where there are technical concepts worth knowing the names of, but I'm also interested in cards that ask me to recall the structure of things.
